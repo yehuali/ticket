@@ -1,3 +1,6 @@
+logging:
+  level:
+    org.springframework: DEBUG
 security:
     basic:
         enabled: false # 是否开启基本的鉴权，默认为true。 true：所有的接口默认都需要被验证，将导致 拦截器[对于 excludePathPatterns()方法失效]
@@ -11,7 +14,7 @@ spring:
   redis:
       database: 4
       host: 127.0.0.1
-      password: root123456
+      password: 123456
       port: 6379
       pool:
           max-active: 8

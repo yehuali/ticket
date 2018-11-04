@@ -16,7 +16,7 @@ public class QueryTicketController {
     @Autowired
     private QueryTicketService queryTicketService;
 
-    @RequestMapping(value = "api/queryStationName")
+    @RequestMapping(value = "api/query/queryStationName")
     public String queryStationName() {
         List<StationNameDTO> stationNameList =  queryTicketService.queryStationName();
         return JSON.toJSONString(stationNameList);

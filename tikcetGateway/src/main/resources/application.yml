@@ -1,0 +1,28 @@
+auth:
+  permitall:
+    -
+      pattern: /login/**
+    -
+      pattern: /web/public/**
+    -
+      pattern: /api/query/**
+
+server:
+  port: 9000
+
+zuul:
+  routes:
+    api:
+      path: /query/**
+      url: http://localhost:8888/
+
+security:
+  oauth2:
+    client:
+      accessTokenUri: /oauth/token
+      clientId: frontend
+      clientSecret: frontend
+    resource:
+      userInfoUri: /user
+      token-info-uri: /oauth/check_token
+  filter-order: 1
