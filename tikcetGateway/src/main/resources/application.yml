@@ -15,7 +15,7 @@ zuul:
     api:
       path: /query/**
       url: http://localhost:8888/
-
+      sensitiveHeaders: Cookie,Set-Cookie
 security:
   oauth2:
     client:
